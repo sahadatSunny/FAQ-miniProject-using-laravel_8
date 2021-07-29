@@ -1,0 +1,199 @@
+/* Imports font from local */
+
+
+
+
+body{
+  background-color: #f0f4fc;
+}
+/* universal styling */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+
+.greenC{
+  color: #41BFB3;
+}
+.redC{
+  color: #ec0d6a;
+}
+
+/* style for accordion */
+
+.accrodion-section{
+    margin-top: 50px;
+}
+
+
+.accrodion-section button span{
+    padding: 40px 0 0 40px;
+    font-weight: 900;
+    font-size: 18px;
+}
+
+.accor{
+    margin-top: 15px;
+}
+
+
+/* style for mother accordion */
+
+.accordion {
+    background-color: #e7edfb;
+    font-family: arial;
+    color: #32477c;
+    font-weight: bolder;
+    cursor: pointer;
+    padding: 10px 20px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    transition: 0.4s;
+    box-shadow: 3px 5px 13px -7px rgba(0,0,0,0.5);
+  }
+ 
+.panel {
+  
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+
+
+.accordion:after {
+    content: '\002B';
+    font-size: 18px;
+    font-weight: bolder;
+    color: #41BFB3;
+    float: left;
+    padding: 1px 8px;
+    background-color: #32477c;
+    border-radius: 5px;
+  }
+  
+.active:after {
+    content: "\2212";
+  }
+
+/* for admin page delet and edit icon */
+
+.f-right{
+  float: right;
+}
+
+
+.text-area{
+  margin: 20px 0;
+  width: 100%;
+  border: none;
+}
+  
+.accrodion-section button span {
+  padding: 10px 20px;
+  font-weight: 900;
+  font-size: 18px;
+}
+
+
+  /* style for sub-accordion section */
+
+
+
+
+  .sub-accordion {
+    background-color: #e7edfb;
+    font-family: arial;
+    color: #32477c;
+    font-weight: bolder;
+    cursor: pointer;
+    padding: 10px 20px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    transition: 0.4s;
+    /* box-shadow: 3px 5px 13px -7px rgba(0,0,0,0.4); */
+  }
+ 
+.sub-panel {
+    padding: 0 18px;
+    color: #32477c;
+    background-color: #fff;
+    max-height: 0;
+    overflow: hidden;
+    border-bottom-left-radius: 10px;
+    font-weight: 500;
+    padding: 0 15px 0 40px;
+    border-bottom-right-radius: 10px;
+    transition: max-height 0.2s ease-out;
+  }
+
+
+.sub-accordion:after {
+    content: '\25BD';
+    font-size: 18px;
+    font-weight: bolder;
+    color: #41BFB3;
+    float: right;
+    padding: 1px 8px;
+    background-color: #32477c;
+    border-radius: 5px;
+  }
+  
+.sub-active:after {
+    content: "\25B3";
+  }
+
+/* style for navbar */
+
+.nav-button-odd{
+  background-color: #41BFB3;
+  width: 80px;
+  border-radius: 5px;
+}
+
+.nav-button-odd:hover{
+  background-color: #63f7e8;
+}
+
+/* .div-margin{
+  margin-left: 600px;
+  width: 300px;
+} */
+
+
+/* admin login form */
+
+
+
+.login-form .btn{
+  background-color: #32477c;
+  color: #41BFB3;
+}
+
+.modal-content{
+  background-color: #e7edfb;
+}
+.navBg{
+  /* background: linear-gradient(to bottom left, #7003fe, #03fefe ); */
+  background: #32477cf3;
+  opacity: .8;
+}
+
+
+@media(min-width: 1260px) {
+
+  .div-margin{
+    margin-left: 600px;
+    width: 300px;
+  }  
+}
