@@ -29,7 +29,7 @@ class CategoryController extends Controller
             'priority' => request('setPriority'),
         ]);
 
-        return redirect('/admin');
+        return redirect('/admin')->with('success','Category created');;
     }
 
     public function delete($id){
@@ -60,17 +60,17 @@ class CategoryController extends Controller
            'priority' => request('priority'),
        ]);
 
-       return redirect('/admin');
+       return redirect('/admin')->with('success','Category updated successfully');;
     }
 
 
-    public function add(){
+    // public function add(){
 
-        $cat = new Category();
-        $cat->category = 'Navigation';
-        $cat->priority = 2;
-        $cat->save();
+    //     $cat = new Category();
+    //     $cat->category = 'Navigation';
+    //     $cat->priority = 2;
+    //     $cat->save();
 
-    }
+    // }
 
 }

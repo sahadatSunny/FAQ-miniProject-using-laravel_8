@@ -1,3 +1,6 @@
+@props(['total' => ''])
+
+
 {{-- Modals for popup --}}
 
     <!-- Modal for add Category form-->

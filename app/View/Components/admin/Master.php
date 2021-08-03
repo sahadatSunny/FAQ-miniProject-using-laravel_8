@@ -1,6 +1,6 @@
 <?php
 
-namespace App\View\Components;
+namespace App\View\Components\admin;
 
 use Illuminate\View\Component;
 
@@ -12,11 +12,11 @@ class Master extends Component
      * @return void
      */
 
-    public $viewTitle;
+    public $title;
 
     public function __construct($title = null)
     {
-        $this->viewTitle = $title;
+        $this->title = $title;
     }
 
     /**
@@ -26,6 +26,6 @@ class Master extends Component
      */
     public function render()
     {
-        return view('components.master');
+        return view('components.admin.master');
     }
 }

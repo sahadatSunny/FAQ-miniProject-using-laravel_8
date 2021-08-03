@@ -1,5 +1,5 @@
 
-<!-- Modal in this case admin login form-->
+<!-- Modal for admin login form-->
 
 <div class="modal fade" id="adminLoginModal" tabindex="-1" role="dialog" aria-labelledby="adminLoginModalLabel" aria-hidden="true">
     <div class="modal-dialog ms-auto" role="document">
@@ -22,6 +22,7 @@
                     </div>
                     <div class="form-group">
                         <button type="submit" class="btn">Log in</button>
+                        <a href="/admin" type="btn" class="btn">Bypass login for now</a>
                     </div>
                     <div class="clearfix">
                         <label class="float-left form-check-label"><input type="checkbox"> Remember me</label>

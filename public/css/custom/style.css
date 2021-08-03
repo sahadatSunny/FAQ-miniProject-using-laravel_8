@@ -1,6 +1,22 @@
 /* Imports font from local */
 
+/* utility class for clolors */
+.color--green {
+  --c: #2dce89;
+  color: #2dce89;
+}
 
+.btn-color--green{
+    color: #fff;
+    border-color: #2dce89;
+    background-color: #2dce89;
+    box-shadow: 0 4px 6px rgb(50 50 93 / 11%), 0 1px 3px rgb(0 0 0 / 8%);
+}
+
+.bg-color--blue {
+  --bg: #172b4d;
+  background-color: #172b4d;
+}
 
 
 body{
@@ -49,7 +65,7 @@ a{
     color: #32477c;
     font-weight: bolder;
     cursor: pointer;
-    padding: 10px 20px;
+    padding: 20px 20px;
     width: 100%;
     text-align: left;
     border: none;
