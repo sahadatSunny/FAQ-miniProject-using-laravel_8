@@ -8,15 +8,7 @@ use App\Models\Question;
 
 class QuestionController extends Controller
 {
-    // public function add_qus($id){
-    //     $cat = Category::find($id);
-    //     $qus = new Question();
-    //     $qus->question = 'How can I ask custome questions?';
-    //     $qus->answer = 'Check our forum';
-    //     $cat->question()->save($qus);
-
-    // }
-
+    
     public function create_qus($id){
 
         $cat = Category::find($id);
@@ -52,6 +44,7 @@ class QuestionController extends Controller
         $id->update([
             'question' => request('qusEdit'),
             'answer' => request('ansEdit'),
+            'category_id' => request('catEdit'),
         ]);
 
         return redirect('/admin')->with('success', 'Updated successfully');

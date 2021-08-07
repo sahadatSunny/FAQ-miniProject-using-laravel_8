@@ -19,6 +19,11 @@ class CategoryController extends Controller
         return view('admin.admin-index', ['category' => $cat]);
     }
 
+    public function show($id){
+        $sltCat = Category::find($id);
+        return view('admin.show', ['sltCategory' => $sltCat]);
+    }
+
     public function create_cat(){
         request()->validate([
             'category' => 'required',
@@ -39,16 +44,6 @@ class CategoryController extends Controller
         return redirect('/admin')->with('success', 'Category has been deleted successfully');
 
     }
-
-    // experimental operations
-
-    // public function edit($id){
-    //     $catEdit = Category::find($id);
-    //     $cat = Category::all();
-    //     return view('admin.admin-index', ['catEdit' => $catEdit, 'category' => $cat]);
-    //     // return view('/admin', ['catEdit' => $catEdit]);
-    //     // return redirect('/admin');
-    // }
 
     public function update(Category $id){
        request()->validate([

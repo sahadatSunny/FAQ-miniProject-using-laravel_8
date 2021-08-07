@@ -112,23 +112,30 @@ function editCategory(id,catValue,catPrio){
 // to popup and pass question id on the edit form 
 
 
-function editQuestion(id,qus,ans){
+function editQuestion(id,qus,ans,catId,catName){
     
   let editForm = document.getElementById('qusEditForm');
   let editQus = document.getElementById('qusEdit');
   let editAns = document.getElementById('ansEdit');
+  let catNamedom = document.getElementById('catName');
+  let currentCatId = document.getElementById('currentCatId');
+
 
   let qusId = '/edit_question/'+id;
   let qusValue = qus;
   let ansValue = ans;
+  let currentCatName = catName;
+  let categoryId = catId;
 
   editForm.setAttribute("action",qusId);
   editQus.setAttribute("value", qusValue);
   // editAns.setAttribute("value", ansValue);
   editAns.value = ansValue;
-
+  catNamedom.innerHTML = currentCatName;
+  currentCatId.setAttribute("value", categoryId);
 
   $('#qusModal').modal('show');
+
 
 }
 

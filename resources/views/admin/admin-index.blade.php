@@ -1,7 +1,8 @@
     {{-- experimenting section custom made only string rendaring method instead of view  --}}
 
-
 <x-admin.master title="Admin-FAQ">
+
+
 
     <div class="container-fluid mt--6">
         <div class="row">
@@ -32,7 +33,7 @@
                   <div class="card-body">
                     <!-- Accordion -->
                     <div class="">
-                      <?php ?>
+                      <?php $total = []?>
                       <?php $count = 1?>
 
                       @foreach ($category->sortBy('priority') as $cat)
@@ -55,7 +56,7 @@
     <x-layouts.filter bgColor="" elementsColor="warning"/>
 
     {{-- pop up modals --}}
-    <x-admin.Layouts.admin-modals :total="$total"/>
+    <x-admin.Layouts.admin-modals :total="$total" :catOption="$category"/>
 
     {{-- custome js for this page only to components.master file --}}
 

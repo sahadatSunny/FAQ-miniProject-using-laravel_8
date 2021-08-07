@@ -1,4 +1,4 @@
-@props(['total' => ''])
+@props(['total' => '', 'catOption' => ''])
 
 
 {{-- Modals for popup --}}
@@ -22,7 +22,7 @@
                         <h2 class="text-center">ADD NEW CATEGORY</h2>       
                         <div class="form-group">
                           <label for="category">Input FAQ category name</label>
-                            <input type="text" class="form-control" name="category" id="category" placeholder="FAQ category" required="required">
+                            <input type="text" class="form-control" name="category" id="category" placeholder="FAQ category">
                         </div>
                         
                         <div class="form-group">
@@ -161,13 +161,29 @@
                       
                         <h2 class="text-center mb-5">Edit question</h2>       
                         <div class="form-group">
-                            <input type="text" class="form-control text-dark" name="qusEdit" id="qusEdit"  placeholder="Question" value="" required="required">
+                            <input type="text" class="form-control text-dark" name="qusEdit" id="qusEdit"  placeholder="Question" value="" >
                         </div>
   
                         <div class="form-group">
-                          <textarea class="form-control text-dark" name="ansEdit" id="ansEdit"  placeholder="Answer" required="required"></textarea>
+                          <textarea class="form-control text-dark" name="ansEdit" id="ansEdit"  placeholder="Answer" ></textarea>
                         </div>
-                        
+
+
+                        <div class="form-group row">
+                          <h3 class="col">Current category: <span id="catName" class="text-success"></span></h3>
+                          <div class="col">
+                              <label for="catIdEdit">Migrate this question</label>
+                              <select class="p-1 d-inline" aria-label="Default select example" name="catEdit" id="">
+                                <option selected id="currentCatId" value="">Select where: </option>
+                                @foreach ($catOption as $cat)
+                                    <option value="{{ $cat->id }}">{{ $cat->category }}</option>
+                                @endforeach
+                                
+                              </select>
+                          </div>
+
+                        </div>
+
                         <div class="form-group">
                             <button type="submit" class="btn mt-5">Update</button>
                         </div>

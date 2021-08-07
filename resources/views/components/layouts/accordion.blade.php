@@ -17,7 +17,8 @@
             <button class="sub-accordion">
               <span>{{ $qus->question }}</span>
               @if (isset($qusCRUD))
-                {{ $qusCRUD }}
+              <span class="f-right"><a href="delete_qus/{{ $qus->id }}" class="redC"><i class="fas fa-trash ml-2"></i></a></span>
+              <span class="f-right"><a onclick='editQuestion("{{ $qus->id }}" , "{{ $qus->question }}" , "{{ $qus->answer }}" , "{{ $qus->category_id }}" , "{{ $qus->category->category }}")'><i class=" fas fa-edit ml-2"></i></a></span>
               @endif
             </button>
             <div class="sub-panel">
